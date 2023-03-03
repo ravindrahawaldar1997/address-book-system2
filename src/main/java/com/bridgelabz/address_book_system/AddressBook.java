@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class AddressBook {
     Scanner scan = new Scanner(System.in);
 
-    public void createContact() {
+    public Contact createContact(ArrayList arrayList) {
         Contact contact = new Contact();
         System.out.println("enter first name");
         String firstName = scan.next();
@@ -32,8 +32,12 @@ public class AddressBook {
         System.out.println("enter email id");
         String email = scan.next();
         contact.setEmail(email);
-        System.out.println(contact);
+        arrayList.add(contact);
+        System.out.println(arrayList);
+        return contact;
+
     }
+
 }
 
 
